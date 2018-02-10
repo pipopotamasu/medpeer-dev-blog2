@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from '../../components/csrf/App.vue'
+import App from '../../components/chapter1/App.vue'
 
 Vue.component('vue-app', App)
 

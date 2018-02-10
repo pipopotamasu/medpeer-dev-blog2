@@ -14,7 +14,7 @@ export default {
     }
   },
   created () {
-    axios.post('/csrf')
+    axios.post('/chapter1')
   }
 }
 </script>

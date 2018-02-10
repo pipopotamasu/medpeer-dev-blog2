@@ -1,4 +1,4 @@
-class CsrfController < ApplicationController
+class Chapter1Controller < ApplicationController
   def index
   end
 
