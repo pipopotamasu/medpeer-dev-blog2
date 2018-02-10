@@ -5,11 +5,16 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data () {
     return {
       message: "Hello Vue!"
     }
+  },
+  created () {
+    axios.post('/csrf')
   }
 }
 </script>
