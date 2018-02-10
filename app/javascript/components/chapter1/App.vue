@@ -14,7 +14,7 @@ export default {
     }
   },
   created () {
-    axios.post('/chapter1')
+    axios.post('/users')
   }
 }
 </script>
