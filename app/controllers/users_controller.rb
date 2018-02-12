@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def create
-    p 'created!'
+    render json: :ok 
   end
 end
