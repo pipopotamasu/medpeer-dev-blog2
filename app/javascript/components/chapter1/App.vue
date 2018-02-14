@@ -5,11 +5,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-import { csrfToken } from 'rails-ujs'
-
-axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
-
 export default {
   data () {
     return {
@@ -17,7 +12,7 @@ export default {
     }
   },
   created () {
-    axios.post('/users')
+    this.axios.post('/users')
   }
 }
 </script>
