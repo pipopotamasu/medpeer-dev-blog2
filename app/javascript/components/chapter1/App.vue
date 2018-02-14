@@ -1,22 +1,18 @@
 <template>
-  <div id="app">
+  <div id="vue-app">
     <p>{{ message }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  data: function () {
+  data () {
     return {
       message: "Hello Vue!"
     }
+  },
+  created () {
+    this.axios.post('/users')
   }
 }
 </script>
-
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
-</style>
