@@ -6,9 +6,9 @@
 
 <script>
 import axios from 'axios'
+import { csrfToken } from 'rails-ujs'
 
-const token = document.getElementsByName('csrf-token')[0].getAttribute('content')
-axios.defaults.headers.common['X-CSRF-Token'] = token
+axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
 
 export default {
   data () {
