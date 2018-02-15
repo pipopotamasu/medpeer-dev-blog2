@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get '/chapter1', to: 'chapter1#index'
   get '/chapter2', to: 'chapter2#index'
   post '/users', to: 'users#create'
-  root to: 'chapter1#index'
+  root to: 'home#index'
 end
