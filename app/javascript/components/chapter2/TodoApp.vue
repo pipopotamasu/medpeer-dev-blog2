@@ -1,11 +1,14 @@
 <template>
   <div id="todo-app">
-    <input v-model="input" type="text" size="20"/><button @click="addTodo">Submit</button>
+    <input v-model="input" type="text" size="20"/>
+    <button @click="addTodo">Submit</button>
     <ul>
       <template v-for="(todo, i) in todos">
         <li>
           <input v-model="todo.checked" type="checkbox" :id="'todo-' + i" />
-          <label :class="{ done: todo.checked }" :for="'todo-' + i">{{ todo.body }}</label>
+          <label :class="{ done: todo.checked }" :for="'todo-' + i">
+            {{ todo.body }}
+          </label>
           <span @click="deleteTodo(i)" class="delete">[×]</span>
         </li>
       </template>
