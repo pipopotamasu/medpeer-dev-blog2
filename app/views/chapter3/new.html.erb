@@ -1,2 +1,34 @@
-new
+<div class="user-register-form">
+  <%= form_with model: @user, url: 'hoge' do |f| %>
+    <div class="form-group">
+      <%= f.label :lastname, '苗字:' %>
+      <%= f.text_field :lastname %>
+      <%= f.label :firstname, '名前:' %>
+      <%= f.text_field :firstname %>
+    </div>
+    <div class="form-group">
+      <%= f.label :age, '年齢:' %>
+      <%= f.text_field :age %>
+    </div>
+    <div class="form-group">
+      <%= f.label :adrress, '住所:' %>
+      <%= f.text_field :adrress %>
+    </div>
+    <div class="form-group">
+      <%= f.label :email, 'メール:' %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone, '電話番号:' %>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="submit">
+      <%= f.button type: 'submit' do %>
+       登録する
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
 <%= javascript_pack_tag 'chapter3/new' %>
