@@ -1,5 +1,8 @@
-<div class="user-register-form">
+<user-register-form id="user-register-form" inline-template>
   <%= form_with model: @user, url: 'hoge' do |f| %>
+    <div class="error-area">
+      
+    </div>
     <div class="form-group">
       <%= f.label :lastname, '苗字:' %>
       <%= f.text_field :lastname %>
@@ -24,11 +27,9 @@
     </div>
     <div class="submit">
       <%= f.button type: 'submit' do %>
-       登録する
+      登録する
       <% end %>
     </div>
   <% end %>
-</div>
-
-
+</user-register-form>
 <%= javascript_pack_tag 'chapter3/new' %>
