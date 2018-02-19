@@ -5,9 +5,7 @@ export default {
       lastname: '',
       firstname: '',
       age: 0,
-      address: '',
-      email: '',
-      phone: 0
+      email: ''
     }
   },
   methods: {
@@ -18,7 +16,7 @@ export default {
         }
       },
       valid: function() {
-        true
+        return this.errors.length === 0
       }
   }
 }
