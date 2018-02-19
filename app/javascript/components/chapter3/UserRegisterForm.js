@@ -2,10 +2,18 @@ export default {
   data: function () {
     return {
       errors: ['hoge', 'fuga'],
-      lastname: ''
+      lastname: '',
+      firstname: '',
+      age: 0,
+      address: '',
+      email: '',
+      phone: 0
     }
   },
-  created: function() {
-    console.log(1)
+  methods: {
+      hoge: function(e) {
+        e.preventDefault()
+        console.log(this.lastname)
+      }
   }
 }
