@@ -1,7 +1,7 @@
 export default {
   data: function () {
     return {
-      errors: ['hoge', 'fuga'],
+      errors: [],
       lastname: '',
       firstname: '',
       age: 0,
@@ -11,9 +11,14 @@ export default {
     }
   },
   methods: {
-      hoge: function(e) {
+      onSubmit: function(e) {
         e.preventDefault()
-        console.log(this.lastname)
+        if(this.valid()) {
+          // submit!
+        }
+      },
+      valid: function() {
+        true
       }
   }
 }
