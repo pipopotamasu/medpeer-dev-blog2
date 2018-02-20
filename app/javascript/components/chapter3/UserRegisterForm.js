@@ -9,11 +9,10 @@ export default {
     }
   },
   methods: {
-      onSubmit: function(e) {
-        e.preventDefault()
+      onSubmit: function() {
         this.errors = []
         if(this.valid()) {
-          // submit!
+          console.log('submit!')
         }
       },
       valid: function() {
