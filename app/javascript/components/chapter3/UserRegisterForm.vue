@@ -1,7 +1,7 @@
 <template>
     <form id="user-register-form-vue" action="hoge" accept-charset="UTF-8" data-remote="true" method="post">
         <input name="utf8" type="hidden" value="✓" />
-        <input name="authenticity_token" type="hidden" value="csrftoken入れる" />
+        <input name="authenticity_token" type="hidden" value="csrf_token" />
         <div class="error-area">
           <p v-for="error in errors" :key="error.key">{{ error.message }}</p>
         </div>
@@ -35,8 +35,12 @@ export default {
       lastname: '',
       firstname: '',
       age: 0,
-      email: ''
+      email: '',
+      csrf_token: ''
     }
+  },
+  mounted: function() {
+    this.csrf_token = document.querySelector('[name=csrf-token]').content
   },
   methods: {
       onSubmit: function() {
